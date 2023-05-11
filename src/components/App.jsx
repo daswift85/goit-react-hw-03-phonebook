@@ -64,6 +64,7 @@ export class App extends Component {
           contacts={visibleContacts}
           onDeleteContact={this.deleteContact}
         />
+        <p>test</p>
       </div>
     );
   }
