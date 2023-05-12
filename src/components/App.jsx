@@ -15,11 +15,11 @@ export class App extends Component {
   };
 
   addContact = newContact => {
-    const normalizedFind = newContact.name.toLowerCase();
-        const findName = this.state.contacts.find(contact => contact.name.toLowerCase() === normalizedFind);
-        if (findName) {
-            return alert(`${newContact.name} is already in contacts.`);
-        }
+    // const normalizedFind = newContact.name.toLowerCase();
+    //     const findName = this.state.contacts.find(contact => contact.name.toLowerCase() === normalizedFind);
+    //     if (findName) {
+    //         return alert(`${newContact.name} is already in contacts.`);
+    //     }
     this.setState(prevState => {
       return {
         contacts: [...prevState.contacts, newContact],
@@ -64,7 +64,6 @@ export class App extends Component {
           contacts={visibleContacts}
           onDeleteContact={this.deleteContact}
         />
-        <p>test</p>
       </div>
     );
   }
