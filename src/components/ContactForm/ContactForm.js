@@ -23,18 +23,10 @@ export const ContactForm = ({ onAdd, contacts }) => (
 
       validationSchema={PhoneSchema}
       onSubmit={(values, actions) => {
-        const normalizedFind = values.name.toLowerCase();
-        const findName = contacts.find(
-          contact => contact.name.toLowerCase() === normalizedFind
-        );
-        if (findName) {
-          actions.setFieldValue('name', '');
-          alert(`${values.name} is already in contacts.`);
-        } else {
-          onAdd({ ...values, id: nanoid() });
-          actions.resetForm();
-        }
+        onAdd({ ...values, id: nanoid() });
+        actions.resetForm();
       }}
+      
     >
 <Form>
         <label>
