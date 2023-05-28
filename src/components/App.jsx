@@ -69,7 +69,7 @@ export class App extends Component {
     return (
       <div>
         <h1>Phonebook</h1>
-        <ContactForm onAdd={this.addContact} contacts={this.state.contacts} />
+        <ContactForm onAdd={this.addContact}/>
 
         <h2>Contacts</h2>
         <Filter value={filter} onChange={this.handleFilter} />
